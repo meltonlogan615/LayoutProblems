@@ -20,7 +20,6 @@ class SearchViewController: UIViewController {
     searchView.searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .primaryActionTriggered)
     style()
     layout()
-    
   }
   
   override func viewDidDisappear(_ animated: Bool) {
@@ -54,7 +53,8 @@ extension SearchViewController {
       searchView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       
       // will not work without this. if removed, textfield and button become unresponsive. not able to find any conflicting constraints
-      searchView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//      searchView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//      searchView.heightAnchor.constraint(equalToConstant: 200)
     ])
   }
 }

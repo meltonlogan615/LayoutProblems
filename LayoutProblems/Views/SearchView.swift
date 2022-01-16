@@ -61,10 +61,12 @@ extension SearchView {
 
     
     addSubview(stackView)
-    NSLayoutConstraint.activate([
-      trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 2),
-      stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2)
-    ])
+      NSLayoutConstraint.activate([
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+        stackView.topAnchor.constraint(equalTo: topAnchor),
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+      ])
   }
 }
 
